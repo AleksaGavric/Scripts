@@ -1,4 +1,3 @@
-import random
 import time
 import webbrowser
 
@@ -33,6 +32,7 @@ def run_alarm(alarm_time):
         if current_time == alarm_time:
             webbrowser.open("https://google.com")
             break
+        time.sleep(1)
 
 
 def main():

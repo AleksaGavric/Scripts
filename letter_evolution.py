@@ -8,6 +8,9 @@ def guesser():
     possible_characters = string.ascii_lowercase + string.digits
     target = input("Enter your target text: ").lower()
 
+    if any(character not in possible_characters for character in target):
+        raise ValueError("Target must contain only ASCII letters and digits.")
+
     start = time.time()
 
     attempt_this = "".join(
